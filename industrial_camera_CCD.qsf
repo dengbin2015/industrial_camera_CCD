@@ -1,0 +1,86 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2009 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+# Date created = 11:12:46  June 23, 2016
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		industrial_camera_CCD_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY MAX7000S
+set_global_assignment -name DEVICE "EPM7064STC44-10"
+set_global_assignment -name TOP_LEVEL_ENTITY industrial_camera_CCD
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:12:46  JUNE 23, 2016"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.0 SP1"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name MAX7000_OPTIMIZATION_TECHNIQUE BALANCED
+set_global_assignment -name MISC_FILE "C:/Users/ALAN/Desktop/industrial camera CCD/industrial_camera_CCD.dpf"
+set_global_assignment -name MAX7000_DEVICE_IO_STANDARD TTL
+set_location_assignment PIN_37 -to clk
+set_location_assignment PIN_22 -to ad_clock
+set_global_assignment -name SIMULATION_MODE TIMING
+set_location_assignment PIN_44 -to oe
+set_location_assignment PIN_38 -to RXF
+set_location_assignment PIN_43 -to TXE
+set_location_assignment PIN_23 -to USB_DATA[0]
+set_location_assignment PIN_25 -to USB_DATA[1]
+set_location_assignment PIN_27 -to USB_DATA[2]
+set_location_assignment PIN_28 -to USB_DATA[3]
+set_location_assignment PIN_30 -to USB_DATA[4]
+set_location_assignment PIN_31 -to USB_DATA[5]
+set_location_assignment PIN_33 -to USB_DATA[6]
+set_location_assignment PIN_34 -to USB_DATA[7]
+set_location_assignment PIN_35 -to USB_RD
+set_location_assignment PIN_42 -to USB_WD
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_palace
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE industrial_camera_CCD.vwf
+set_global_assignment -name MISC_FILE "C:/Users/ALAN/Desktop/qaza/test_industrial camera CCD_no CCD/industrial_camera_CCD.dpf"
+set_location_assignment PIN_21 -to din[0]
+set_location_assignment PIN_20 -to din[1]
+set_location_assignment PIN_19 -to din[2]
+set_location_assignment PIN_18 -to din[3]
+set_location_assignment PIN_15 -to din[4]
+set_location_assignment PIN_14 -to din[5]
+set_location_assignment PIN_13 -to din[6]
+set_location_assignment PIN_12 -to din[7]
+set_location_assignment PIN_5 -to QM
+set_location_assignment PIN_3 -to SH
+set_global_assignment -name MISC_FILE "C:/Users/ALAN/Desktop/qaza/test_industrial camera CCD_no CCD - OE/industrial_camera_CCD.dpf"
+set_location_assignment PIN_2 -to ICG
+set_global_assignment -name VHDL_FILE reference_frequency.vhd
+set_global_assignment -name VHDL_FILE AD_frequency.vhd
+set_global_assignment -name VHDL_FILE usb_control.vhd
+set_global_assignment -name VHDL_FILE SH_ICG_frequency.vhd
+set_global_assignment -name BDF_FILE industrial_camera_CCD.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE industrial_camera_CCD.vwf
+set_global_assignment -name TCL_SCRIPT_FILE industrial_camera_CCD.tcl

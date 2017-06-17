@@ -1,0 +1,260 @@
+Simulator report for industrial_camera_CCD
+Thu Nov 03 16:55:42 2016
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------+
+; Simulator Summary                             ;
++-----------------------------+-----------------+
+; Type                        ; Value           ;
++-----------------------------+-----------------+
+; Simulation Start Time       ; 0 ps            ;
+; Simulation End Time         ; 2.0 ms          ;
+; Simulation Netlist Size     ; 112 nodes       ;
+; Simulation Coverage         ;      83.15 %    ;
+; Total Number of Transitions ; 700107          ;
+; Simulation Breakpoints      ; 0               ;
+; Family                      ; MAX7000S        ;
+; Device                      ; EPM7064STC44-10 ;
++-----------------------------+-----------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                     ;
++--------------------------------------------------------------------------------------------+---------------------------+---------------+
+; Option                                                                                     ; Setting                   ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------+---------------+
+; Simulation mode                                                                            ; Timing                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                      ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                      ;               ;
+; Vector input source                                                                        ; industrial_camera_CCD.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                        ; On            ;
+; Check outputs                                                                              ; Off                       ; Off           ;
+; Report simulation coverage                                                                 ; On                        ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                        ; On            ;
+; Display missing 1-value coverage report                                                    ; On                        ; On            ;
+; Display missing 0-value coverage report                                                    ; On                        ; On            ;
+; Detect setup and hold time violations                                                      ; Off                       ; Off           ;
+; Detect glitches                                                                            ; Off                       ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                       ; Off           ;
+; Generate Signal Activity File                                                              ; Off                       ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                       ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                       ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                        ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                       ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                       ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                      ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      83.15 % ;
+; Total nodes checked                                 ; 112          ;
+; Total output ports checked                          ; 89           ;
+; Total output ports with complete 1/0-value coverage ; 74           ;
+; Total output ports with no 1/0-value coverage       ; 8            ;
+; Total output ports with no 1-value coverage         ; 8            ;
+; Total output ports with no 0-value coverage         ; 15           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                            ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; Node Name                                                                        ; Output Port Name                                                                 ; Output Port Type ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+; |industrial_camera_CCD|reference_frequency:inst|TEMP[0]                          ; |industrial_camera_CCD|reference_frequency:inst|TEMP[0]                          ; dataout          ;
+; |industrial_camera_CCD|reference_frequency:inst|TEMP[1]                          ; |industrial_camera_CCD|reference_frequency:inst|TEMP[1]                          ; dataout          ;
+; |industrial_camera_CCD|reference_frequency:inst|ref_clock                        ; |industrial_camera_CCD|reference_frequency:inst|ref_clock                        ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[0]                             ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[0]                             ; dataout          ;
+; |industrial_camera_CCD|usb_control:inst1|wrt_state[0]                            ; |industrial_camera_CCD|usb_control:inst1|wrt_state[0]                            ; dataout          ;
+; |industrial_camera_CCD|usb_control:inst1|rnd_state[0]                            ; |industrial_camera_CCD|usb_control:inst1|rnd_state[0]                            ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|ad_clock~reg0                          ; |industrial_camera_CCD|AD_frequency:inst4|ad_clock~reg0                          ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|lpm_counter:SH_COUNT_rtl_0|dffs[1] ; |industrial_camera_CCD|SH_ICG_frequency:inst5|lpm_counter:SH_COUNT_rtl_0|dffs[1] ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[0]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[0]        ; dataout          ;
+; |industrial_camera_CCD|usb_control:inst1|wrt_state[1]                            ; |industrial_camera_CCD|usb_control:inst1|wrt_state[1]                            ; dataout          ;
+; |industrial_camera_CCD|usb_control:inst1|rnd_state[1]                            ; |industrial_camera_CCD|usb_control:inst1|rnd_state[1]                            ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[1]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[1]        ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|lpm_counter:SH_COUNT_rtl_0|dffs[2] ; |industrial_camera_CCD|SH_ICG_frequency:inst5|lpm_counter:SH_COUNT_rtl_0|dffs[2] ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[2]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[2]        ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|lpm_counter:SH_COUNT_rtl_0|dffs[3] ; |industrial_camera_CCD|SH_ICG_frequency:inst5|lpm_counter:SH_COUNT_rtl_0|dffs[3] ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[3]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[3]        ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~484                            ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~484                            ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[4]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[4]        ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[5]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[5]        ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[4]                             ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[4]                             ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[6]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[6]        ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[5]                             ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[5]                             ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[7]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[7]        ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[8]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[8]        ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[6]                             ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[6]                             ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[9]        ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[9]        ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[7]                             ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[7]                             ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[10]       ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[10]       ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[8]                             ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[8]                             ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~149                           ; |industrial_camera_CCD|AD_frequency:inst4|process2~149                           ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|dout[7]                                ; |industrial_camera_CCD|AD_frequency:inst4|dout[7]                                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|dout[6]                                ; |industrial_camera_CCD|AD_frequency:inst4|dout[6]                                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|dout[5]                                ; |industrial_camera_CCD|AD_frequency:inst4|dout[5]                                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|dout[4]                                ; |industrial_camera_CCD|AD_frequency:inst4|dout[4]                                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|dout[2]                                ; |industrial_camera_CCD|AD_frequency:inst4|dout[2]                                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|dout[1]                                ; |industrial_camera_CCD|AD_frequency:inst4|dout[1]                                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|dout[0]                                ; |industrial_camera_CCD|AD_frequency:inst4|dout[0]                                ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[10]                            ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[10]                            ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[11]                            ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[11]                            ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[12]                            ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[12]                            ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[9]                             ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[9]                             ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~135                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~135                      ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~141                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~141                      ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~519                            ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~519                            ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~524                            ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~524                            ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~142                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~142                      ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~143                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~143                      ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~144                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~144                      ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~150                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|LessThan1~150                      ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|SH_TMP~125                         ; |industrial_camera_CCD|SH_ICG_frequency:inst5|SH_TMP~125                         ; dataout          ;
+; |industrial_camera_CCD|usb_control:inst1|Mux6~59sexpand0                         ; |industrial_camera_CCD|usb_control:inst1|Mux6~59sexpand0                         ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp2                      ; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp2                      ; dataout          ;
+; |industrial_camera_CCD|clk                                                       ; |industrial_camera_CCD|clk~corein                                                ; dataout          ;
+; |industrial_camera_CCD|din[7]                                                    ; |industrial_camera_CCD|din[7]~corein                                             ; dataout          ;
+; |industrial_camera_CCD|din[6]                                                    ; |industrial_camera_CCD|din[6]~corein                                             ; dataout          ;
+; |industrial_camera_CCD|din[5]                                                    ; |industrial_camera_CCD|din[5]~corein                                             ; dataout          ;
+; |industrial_camera_CCD|din[4]                                                    ; |industrial_camera_CCD|din[4]~corein                                             ; dataout          ;
+; |industrial_camera_CCD|din[3]                                                    ; |industrial_camera_CCD|din[3]~corein                                             ; dataout          ;
+; |industrial_camera_CCD|din[2]                                                    ; |industrial_camera_CCD|din[2]~corein                                             ; dataout          ;
+; |industrial_camera_CCD|din[1]                                                    ; |industrial_camera_CCD|din[1]~corein                                             ; dataout          ;
+; |industrial_camera_CCD|din[0]                                                    ; |industrial_camera_CCD|din[0]~corein                                             ; dataout          ;
+; |industrial_camera_CCD|QM                                                        ; |industrial_camera_CCD|QM                                                        ; padio            ;
+; |industrial_camera_CCD|ad_clock                                                  ; |industrial_camera_CCD|ad_clock                                                  ; padio            ;
+; |industrial_camera_CCD|USB_WD                                                    ; |industrial_camera_CCD|USB_WD                                                    ; padio            ;
+; |industrial_camera_CCD|USB_RD                                                    ; |industrial_camera_CCD|USB_RD                                                    ; padio            ;
+; |industrial_camera_CCD|USB_DATA[7]                                               ; |industrial_camera_CCD|USB_DATA[7]~output                                        ; padio            ;
+; |industrial_camera_CCD|USB_DATA[6]                                               ; |industrial_camera_CCD|USB_DATA[6]~output                                        ; padio            ;
+; |industrial_camera_CCD|USB_DATA[5]                                               ; |industrial_camera_CCD|USB_DATA[5]~output                                        ; padio            ;
+; |industrial_camera_CCD|USB_DATA[4]                                               ; |industrial_camera_CCD|USB_DATA[4]~output                                        ; padio            ;
+; |industrial_camera_CCD|USB_DATA[2]                                               ; |industrial_camera_CCD|USB_DATA[2]~output                                        ; padio            ;
+; |industrial_camera_CCD|USB_DATA[1]                                               ; |industrial_camera_CCD|USB_DATA[1]~output                                        ; padio            ;
+; |industrial_camera_CCD|USB_DATA[0]                                               ; |industrial_camera_CCD|USB_DATA[0]~output                                        ; padio            ;
+; |industrial_camera_CCD|SH                                                        ; |industrial_camera_CCD|SH                                                        ; padio            ;
+; |industrial_camera_CCD|usb_control:inst1|Mux6~64                                 ; |industrial_camera_CCD|usb_control:inst1|Mux6~64                                 ; dataout          ;
++----------------------------------------------------------------------------------+----------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                     ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; Node Name                                                   ; Output Port Name                                            ; Output Port Type ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~483       ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~483       ; dataout          ;
+; |industrial_camera_CCD|~GND~1                               ; |industrial_camera_CCD|~GND~1                               ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp3 ; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp3 ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp4 ; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp4 ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp5 ; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp5 ; dataout          ;
+; |industrial_camera_CCD|TXE                                  ; |industrial_camera_CCD|TXE~corein                           ; dataout          ;
+; |industrial_camera_CCD|RXF                                  ; |industrial_camera_CCD|RXF~corein                           ; dataout          ;
+; |industrial_camera_CCD|oe                                   ; |industrial_camera_CCD|oe                                   ; padio            ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                   ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; Node Name                                                                  ; Output Port Name                                                           ; Output Port Type ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~483                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT~483                      ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[11] ; |industrial_camera_CCD|AD_frequency:inst4|lpm_counter:count_rtl_1|dffs[11] ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|dout[3]                          ; |industrial_camera_CCD|AD_frequency:inst4|dout[3]                          ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[13]                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|CNT[13]                      ; dataout          ;
+; |industrial_camera_CCD|SH_ICG_frequency:inst5|ICG_TMP                      ; |industrial_camera_CCD|SH_ICG_frequency:inst5|ICG_TMP                      ; dataout          ;
+; |industrial_camera_CCD|~GND~1                                              ; |industrial_camera_CCD|~GND~1                                              ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp1                ; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp1                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp3                ; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp3                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp4                ; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp4                ; dataout          ;
+; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp5                ; |industrial_camera_CCD|AD_frequency:inst4|process2~155sexp5                ; dataout          ;
+; |industrial_camera_CCD|TXE                                                 ; |industrial_camera_CCD|TXE~corein                                          ; dataout          ;
+; |industrial_camera_CCD|RXF                                                 ; |industrial_camera_CCD|RXF~corein                                          ; dataout          ;
+; |industrial_camera_CCD|oe                                                  ; |industrial_camera_CCD|oe                                                  ; padio            ;
+; |industrial_camera_CCD|USB_DATA[3]                                         ; |industrial_camera_CCD|USB_DATA[3]~output                                  ; padio            ;
+; |industrial_camera_CCD|ICG                                                 ; |industrial_camera_CCD|ICG                                                 ; padio            ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Thu Nov 03 16:55:24 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off industrial_camera_CCD -c industrial_camera_CCD
+Info: Using vector source file "C:/Documents and Settings/Administrator/×ÀÃæ/industrial camera 11.3/test_industrial camera CCD_no CCD - OE - fenzhen - wuyanchi/industrial_camera_CCD.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "ref_clock" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      83.15 %
+Info: Number of transitions in simulation is 700107
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 108 megabytes
+    Info: Processing ended: Thu Nov 03 16:55:42 2016
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:17
+
+

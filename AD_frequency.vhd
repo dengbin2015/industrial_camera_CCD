@@ -1,0 +1,68 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+use ieee.numeric_std.all;
+ENTITY AD_frequency IS
+PORT(ref_clock,ICG_down_to_up: IN STD_LOGIC;
+	 ad_clock: INOUT STD_LOGIC;
+	 dout_switch_r: IN STD_LOGIC;
+	 oe :out std_logic;                      
+    din:in std_logic_vector(7 downto 0);    
+    dout:out std_logic_vector(7 downto 0));
+END;
+ARCHITECTURE AD_frequency_ARCH OF AD_frequency IS
+SIGNAL ICG_TAG: STD_LOGIC;
+SIGNAL max: STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL max_location: STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL count: STD_LOGIC_VECTOR(15 DOWNTO 0);
+--SIGNAL count: std_logic_vector(7 downto 0);
+
+BEGIN
+PROCESS(ref_clock)
+VARIABLE TEMP: INTEGER RANGE 0 TO 3:=0;
+BEGIN
+	IF ref_clock'EVENT AND ref_clock = '0' THEN
+		TEMP := TEMP + 1;
+		IF TEMP > 1 and TEMP <= 3 THEN
+			ad_clock <= '1';
+		ELSE
+			ad_clock <= '0';
+		END IF;
+	END IF;
+END PROCESS;
+
+oe <= '0';
+
+PROCESS(ICG_down_to_up,ad_clock)
+--VARIABLE count: INTEGER RANGE 0 TO 3999;
+--VARIABLE max_location: INTEGER RANGE 0 TO 3750:=0;
+--VARIABLE count: INTEGER RANGE 0 TO 3750:=0;
+begin
+--	IF ICG_down_to_up'event and ICG_down_to_up = '1' THEN
+	IF ad_clock'event and ad_clock = '1'   THEN
+		--IF  dout_switch_r = '0' THEN	    
+			IF  ICG_down_to_up = '1' THEN
+				count <= count + 1;
+				dout <= din;
+				IF din > max THEN max <= din; max_location <= count; END IF;
+			ELSE
+				--dout <="11111111";
+				count <= "0000000000000000" ;
+				IF  dout_switch_r = '1' THEN
+					dout <= max;
+					max <= "00000000";
+					dout <= max_location(7 downto 0);
+					dout <= max_location(15 downto 8);
+					--dout <= to_stdlogicvector(to_bitvector(max_location) srl 8); --max_location SRL 8;
+				END IF;
+			END IF;
+		--ELSE           
+		--	dout <= ;
+		--END IF;	
+	END IF;
+--	if ICG_TAG = '1' then
+--	dout <= "10101111";
+--	end if;
+END PROCESS;
+
+END AD_frequency_ARCH;

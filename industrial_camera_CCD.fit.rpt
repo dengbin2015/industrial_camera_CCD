@@ -1,0 +1,473 @@
+Fitter report for industrial_camera_CCD
+Fri Nov 25 20:21:42 2016
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. Bidir Pins
+ 10. All Package Pins
+ 11. I/O Standard
+ 12. Dedicated Inputs I/O
+ 13. Output Pin Default Load For Reported TCO
+ 14. Fitter Resource Utilization by Entity
+ 15. Control Signals
+ 16. Global & Other Fast Signals
+ 17. Non-Global High Fan-Out Signals
+ 18. Interconnect Usage Summary
+ 19. LAB Macrocells
+ 20. Parallel Expander
+ 21. Logic Cell Interconnection
+ 22. Fitter Device Options
+ 23. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------+
+; Fitter Summary                                                       ;
++-----------------------+----------------------------------------------+
+; Fitter Status         ; Successful - Fri Nov 25 20:21:42 2016        ;
+; Quartus II Version    ; 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition ;
+; Revision Name         ; industrial_camera_CCD                        ;
+; Top-level Entity Name ; industrial_camera_CCD                        ;
+; Family                ; MAX7000S                                     ;
+; Device                ; EPM7064STC44-10                              ;
+; Timing Models         ; Final                                        ;
+; Total macrocells      ; 39 / 64 ( 61 % )                             ;
+; Total pins            ; 30 / 36 ( 83 % )                             ;
++-----------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Fitter Settings                                                                      ;
++----------------------------------------------------+-----------------+---------------+
+; Option                                             ; Setting         ; Default Value ;
++----------------------------------------------------+-----------------+---------------+
+; Device                                             ; EPM7064STC44-10 ;               ;
+; Use smart compilation                              ; Off             ; Off           ;
+; Use TimeQuest Timing Analyzer                      ; Off             ; Off           ;
+; Optimize Timing for ECOs                           ; Off             ; Off           ;
+; Regenerate full fit report during ECO compiles     ; Off             ; Off           ;
+; Optimize IOC Register Placement for Timing         ; On              ; On            ;
+; Limit to One Fitting Attempt                       ; Off             ; Off           ;
+; Fitter Initial Placement Seed                      ; 1               ; 1             ;
+; Slow Slew Rate                                     ; Off             ; Off           ;
+; Fitter Effort                                      ; Auto Fit        ; Auto Fit      ;
+; Force Fitter to Avoid Periphery Placement Warnings ; Off             ; Off           ;
++----------------------------------------------------+-----------------+---------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/Documents and Settings/Administrator/◊¿√Ê/7∏ˆFF≤‚ ‘.11.25/7∏ˆFF≤‚ ‘/test_industrial camera CCD_no CCD - OE - fenzhen - wuyanchi/industrial_camera_CCD.pin.
+
+
++------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                          ;
++-----------------------------------+------------------------------------+
+; Resource                          ; Usage                              ;
++-----------------------------------+------------------------------------+
+; Logic cells                       ; 39 / 64 ( 61 % )                   ;
+; Registers                         ; 27 / 64 ( 42 % )                   ;
+; Number of pterms used             ; 76                                 ;
+; User inserted logic elements      ; 0                                  ;
+; I/O pins                          ; 30 / 36 ( 83 % )                   ;
+;     -- Clock pins                 ; 1 / 2 ( 50 % )                     ;
+;     -- Dedicated input pins       ; 1 / 2 ( 50 % )                     ;
+; Global signals                    ; 1                                  ;
+; Shareable expanders               ; 0 / 64 ( 0 % )                     ;
+; Parallel expanders                ; 2 / 60 ( 3 % )                     ;
+; Cells using turbo bit             ; 39 / 64 ( 61 % )                   ;
+; Maximum fan-out node              ; reference_frequency:inst|ref_clock ;
+; Maximum fan-out                   ; 25                                 ;
+; Highest non-global fan-out signal ; reference_frequency:inst|ref_clock ;
+; Highest non-global fan-out        ; 25                                 ;
+; Total fan-out                     ; 247                                ;
+; Average fan-out                   ; 3.58                               ;
++-----------------------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                   ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; Name   ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; I/O Standard ; Location assigned by ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+; RXF    ; 38    ; --       ; --  ; 6                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; TXE    ; 43    ; --       ; 1   ; 3                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; clk    ; 37    ; --       ; --  ; 3                     ; 0                  ; yes    ; no             ; TTL          ; User                 ;
+; din[0] ; 21    ; --       ; 3   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; din[1] ; 20    ; --       ; 3   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; din[2] ; 19    ; --       ; 3   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; din[3] ; 18    ; --       ; 3   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; din[4] ; 15    ; --       ; 2   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; din[5] ; 14    ; --       ; 2   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; din[6] ; 13    ; --       ; 2   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
+; din[7] ; 12    ; --       ; 2   ; 0                     ; 0                  ; no     ; no             ; TTL          ; User                 ;
++--------+-------+----------+-----+-----------------------+--------------------+--------+----------------+--------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                     ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+; Name     ; Pin # ; I/O Bank ; LAB ; Output Register ; Slow Slew Rate ; Open Drain ; TRI Primitive ; I/O Standard ; Location assigned by ; Load  ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+; ICG      ; 2     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; QM       ; 5     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; SH       ; 3     ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; USB_RD   ; 35    ; --       ; 4   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; USB_WD   ; 42    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; ad_clock ; 22    ; --       ; 3   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
+; oe       ; 44    ; --       ; 1   ; no              ; no             ; no         ; no            ; TTL          ; User                 ; 10 pF ;
++----------+-------+----------+-----+-----------------+----------------+------------+---------------+--------------+----------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bidir Pins                                                                                                                                                                                                ;
++-------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+-----------------+----------------+------------+--------------+----------------------+-------+
+; Name        ; Pin # ; I/O Bank ; LAB ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Slow Slew Rate ; Open Drain ; I/O Standard ; Location assigned by ; Load  ;
++-------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+-----------------+----------------+------------+--------------+----------------------+-------+
+; USB_DATA[0] ; 23    ; --       ; 3   ; 0                     ; 0                  ; no     ; no             ; no              ; no             ; yes        ; TTL          ; User                 ; 10 pF ;
+; USB_DATA[1] ; 25    ; --       ; 3   ; 0                     ; 0                  ; no     ; no             ; no              ; no             ; yes        ; TTL          ; User                 ; 10 pF ;
+; USB_DATA[2] ; 27    ; --       ; 4   ; 0                     ; 0                  ; no     ; no             ; no              ; no             ; yes        ; TTL          ; User                 ; 10 pF ;
+; USB_DATA[3] ; 28    ; --       ; 4   ; 0                     ; 0                  ; no     ; no             ; no              ; no             ; yes        ; TTL          ; User                 ; 10 pF ;
+; USB_DATA[4] ; 30    ; --       ; 4   ; 0                     ; 0                  ; no     ; no             ; no              ; no             ; yes        ; TTL          ; User                 ; 10 pF ;
+; USB_DATA[5] ; 31    ; --       ; 4   ; 0                     ; 0                  ; no     ; no             ; no              ; no             ; yes        ; TTL          ; User                 ; 10 pF ;
+; USB_DATA[6] ; 33    ; --       ; 4   ; 0                     ; 0                  ; no     ; no             ; no              ; no             ; yes        ; TTL          ; User                 ; 10 pF ;
+; USB_DATA[7] ; 34    ; --       ; 4   ; 0                     ; 0                  ; no     ; no             ; no              ; no             ; yes        ; TTL          ; User                 ; 10 pF ;
++-------------+-------+----------+-----+-----------------------+--------------------+--------+----------------+-----------------+----------------+------------+--------------+----------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                      ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage ; Dir.   ; I/O Standard ; Voltage ; User Assignment ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+; 1        ; 6          ; --       ; TDI            ; input  ; TTL          ;         ; N               ;
+; 2        ; 7          ; --       ; ICG            ; output ; TTL          ;         ; Y               ;
+; 3        ; 8          ; --       ; SH             ; output ; TTL          ;         ; Y               ;
+; 4        ; 9          ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 5        ; 10         ; --       ; QM             ; output ; TTL          ;         ; Y               ;
+; 6        ; 11         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 7        ; 12         ; --       ; TMS            ; input  ; TTL          ;         ; N               ;
+; 8        ; 13         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 9        ; 14         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 10       ; 15         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 11       ; 16         ; --       ; RESERVED       ;        ;              ;         ;                 ;
+; 12       ; 17         ; --       ; din[7]         ; input  ; TTL          ;         ; Y               ;
+; 13       ; 18         ; --       ; din[6]         ; input  ; TTL          ;         ; Y               ;
+; 14       ; 19         ; --       ; din[5]         ; input  ; TTL          ;         ; Y               ;
+; 15       ; 20         ; --       ; din[4]         ; input  ; TTL          ;         ; Y               ;
+; 16       ; 21         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 17       ; 22         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 18       ; 23         ; --       ; din[3]         ; input  ; TTL          ;         ; Y               ;
+; 19       ; 24         ; --       ; din[2]         ; input  ; TTL          ;         ; Y               ;
+; 20       ; 25         ; --       ; din[1]         ; input  ; TTL          ;         ; Y               ;
+; 21       ; 26         ; --       ; din[0]         ; input  ; TTL          ;         ; Y               ;
+; 22       ; 27         ; --       ; ad_clock       ; output ; TTL          ;         ; Y               ;
+; 23       ; 28         ; --       ; USB_DATA[0]    ; bidir  ; TTL          ;         ; Y               ;
+; 24       ; 29         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 25       ; 30         ; --       ; USB_DATA[1]    ; bidir  ; TTL          ;         ; Y               ;
+; 26       ; 31         ; --       ; TCK            ; input  ; TTL          ;         ; N               ;
+; 27       ; 32         ; --       ; USB_DATA[2]    ; bidir  ; TTL          ;         ; Y               ;
+; 28       ; 33         ; --       ; USB_DATA[3]    ; bidir  ; TTL          ;         ; Y               ;
+; 29       ; 34         ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 30       ; 35         ; --       ; USB_DATA[4]    ; bidir  ; TTL          ;         ; Y               ;
+; 31       ; 36         ; --       ; USB_DATA[5]    ; bidir  ; TTL          ;         ; Y               ;
+; 32       ; 37         ; --       ; TDO            ; output ; TTL          ;         ; N               ;
+; 33       ; 38         ; --       ; USB_DATA[6]    ; bidir  ; TTL          ;         ; Y               ;
+; 34       ; 39         ; --       ; USB_DATA[7]    ; bidir  ; TTL          ;         ; Y               ;
+; 35       ; 40         ; --       ; USB_RD         ; output ; TTL          ;         ; Y               ;
+; 36       ; 41         ; --       ; GND            ; gnd    ;              ;         ;                 ;
+; 37       ; 42         ; --       ; clk            ; input  ; TTL          ;         ; Y               ;
+; 38       ; 43         ; --       ; RXF            ; input  ; TTL          ;         ; Y               ;
+; 39       ; 0          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 40       ; 1          ; --       ; GND+           ;        ;              ;         ;                 ;
+; 41       ; 2          ; --       ; VCC            ; power  ;              ;         ;                 ;
+; 42       ; 3          ; --       ; USB_WD         ; output ; TTL          ;         ; Y               ;
+; 43       ; 4          ; --       ; TXE            ; input  ; TTL          ;         ; Y               ;
+; 44       ; 5          ; --       ; oe             ; output ; TTL          ;         ; Y               ;
++----------+------------+----------+----------------+--------+--------------+---------+-----------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++--------------------------------------------------------------------------------------------------+
+; I/O Standard                                                                                     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; I/O Standard ; Input Vref ; Dedicated Input Pins ; Pins in I/O Bank1 ; Pins in I/O Bank2 ; Total ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+; TTL          ; -          ; 2                    ; 0                 ; 0                 ; 2     ;
++--------------+------------+----------------------+-------------------+-------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Dedicated Inputs I/O                                               ;
++------+-------+-------+-------+--------------+------------+---------+
+; Name ; Pin # ; Type  ; VCCIO ; I/O Standard ; Input Vref ; Current ;
++------+-------+-------+-------+--------------+------------+---------+
+; RXF  ; 38    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
+; clk  ; 37    ; Input ; --    ; TTL          ; -          ; 0 mA    ;
++------+-------+-------+-------+--------------+------------+---------+
+
+
++-----------------------------------------------+
+; Output Pin Default Load For Reported TCO      ;
++--------------+-------+------------------------+
+; I/O Standard ; Load  ; Termination Resistance ;
++--------------+-------+------------------------+
+; TTL          ; 10 pF ; Not Available          ;
++--------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                              ;
++-------------------------------+------------+------+-------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; Macrocells ; Pins ; Full Hierarchy Name                             ; Library Name ;
++-------------------------------+------------+------+-------------------------------------------------+--------------+
+; |industrial_camera_CCD        ; 39         ; 30   ; |industrial_camera_CCD                          ; work         ;
+;    |AD_frequency:inst4|       ; 2          ; 0    ; |industrial_camera_CCD|AD_frequency:inst4       ; work         ;
+;    |SH_ICG_frequency:inst5|   ; 19         ; 0    ; |industrial_camera_CCD|SH_ICG_frequency:inst5   ; work         ;
+;    |reference_frequency:inst| ; 3          ; 0    ; |industrial_camera_CCD|reference_frequency:inst ; work         ;
+;    |usb_control:inst1|        ; 6          ; 0    ; |industrial_camera_CCD|usb_control:inst1        ; work         ;
++-------------------------------+------------+------+-------------------------------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                    ;
++------------------------------------+----------+---------+-------+--------+----------------------+------------------+
+; Name                               ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ;
++------------------------------------+----------+---------+-------+--------+----------------------+------------------+
+; clk                                ; PIN_37   ; 3       ; Clock ; yes    ; On                   ; --               ;
+; reference_frequency:inst|ref_clock ; LC3      ; 25      ; Clock ; no     ; --                   ; --               ;
++------------------------------------+----------+---------+-------+--------+----------------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Global & Other Fast Signals                                         ;
++------+----------+---------+----------------------+------------------+
+; Name ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
++------+----------+---------+----------------------+------------------+
+; clk  ; PIN_37   ; 3       ; On                   ; --               ;
++------+----------+---------+----------------------+------------------+
+
+
++-----------------------------------------------+
+; Non-Global High Fan-Out Signals               ;
++-------------------------------------+---------+
+; Name                                ; Fan-Out ;
++-------------------------------------+---------+
+; reference_frequency:inst|ref_clock  ; 25      ;
+; SH_ICG_frequency:inst5|CNT[0]       ; 18      ;
+; SH_ICG_frequency:inst5|CNT[1]       ; 17      ;
+; SH_ICG_frequency:inst5|CNT[2]       ; 16      ;
+; SH_ICG_frequency:inst5|CNT[4]       ; 14      ;
+; SH_ICG_frequency:inst5|CNT[5]       ; 14      ;
+; SH_ICG_frequency:inst5|CNT[3]       ; 14      ;
+; SH_ICG_frequency:inst5|CNT[6]       ; 13      ;
+; SH_ICG_frequency:inst5|CNT[7]       ; 12      ;
+; SH_ICG_frequency:inst5|CNT[10]      ; 11      ;
+; SH_ICG_frequency:inst5|CNT[9]       ; 11      ;
+; SH_ICG_frequency:inst5|CNT[8]       ; 11      ;
+; SH_ICG_frequency:inst5|CNT[13]      ; 10      ;
+; SH_ICG_frequency:inst5|CNT[12]      ; 10      ;
+; SH_ICG_frequency:inst5|CNT[11]      ; 10      ;
+; RXF                                 ; 6       ;
+; TXE                                 ; 3       ;
+; usb_control:inst1|USB_RD            ; 2       ;
+; usb_control:inst1|USB_WD            ; 2       ;
+; usb_control:inst1|rnd_state[0]      ; 2       ;
+; usb_control:inst1|wrt_state[0]      ; 2       ;
+; reference_frequency:inst|TEMP[0]    ; 2       ;
+; SH_ICG_frequency:inst5|ICG_TMP~2    ; 1       ;
+; ~GND~8                              ; 1       ;
+; ~GND~7                              ; 1       ;
+; ~GND~6                              ; 1       ;
+; ~GND~5                              ; 1       ;
+; ~GND~4                              ; 1       ;
+; ~GND~3                              ; 1       ;
+; ~GND~2                              ; 1       ;
+; ~GND~1                              ; 1       ;
+; ~GND~0                              ; 1       ;
+; SH_ICG_frequency:inst5|LessThan1~11 ; 1       ;
+; SH_ICG_frequency:inst5|CNT~82       ; 1       ;
+; SH_ICG_frequency:inst5|SH_TMP       ; 1       ;
+; SH_ICG_frequency:inst5|ICG_TMP      ; 1       ;
+; usb_control:inst1|rnd_state[1]      ; 1       ;
+; usb_control:inst1|wrt_state[1]      ; 1       ;
+; AD_frequency:inst4|ad_clock~reg0    ; 1       ;
+; AD_frequency:inst4|TEMP[1]          ; 1       ;
+; reference_frequency:inst|TEMP[1]    ; 1       ;
++-------------------------------------+---------+
+
+
++------------------------------------------------+
+; Interconnect Usage Summary                     ;
++----------------------------+-------------------+
+; Interconnect Resource Type ; Usage             ;
++----------------------------+-------------------+
+; Output enables             ; 0 / 6 ( 0 % )     ;
+; PIA buffers                ; 44 / 144 ( 31 % ) ;
++----------------------------+-------------------+
+
+
++----------------------------------------------------------------------+
+; LAB Macrocells                                                       ;
++----------------------------------------+-----------------------------+
+; Number of Macrocells  (Average = 9.75) ; Number of LABs  (Total = 3) ;
++----------------------------------------+-----------------------------+
+; 0                                      ; 1                           ;
+; 1                                      ; 0                           ;
+; 2                                      ; 0                           ;
+; 3                                      ; 0                           ;
+; 4                                      ; 0                           ;
+; 5                                      ; 0                           ;
+; 6                                      ; 0                           ;
+; 7                                      ; 0                           ;
+; 8                                      ; 1                           ;
+; 9                                      ; 0                           ;
+; 10                                     ; 0                           ;
+; 11                                     ; 0                           ;
+; 12                                     ; 0                           ;
+; 13                                     ; 0                           ;
+; 14                                     ; 0                           ;
+; 15                                     ; 1                           ;
+; 16                                     ; 1                           ;
++----------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parallel Expander                                       ;
++--------------------------+------------------------------+
+; Parallel Expander Length ; Number of Parallel Expanders ;
++--------------------------+------------------------------+
+; 0                        ; 0                            ;
+; 1                        ; 2                            ;
++--------------------------+------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Logic Cell Interconnection                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LAB ; Logic Cell ; Input                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ; Output                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+;  A  ; LC10       ; SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                      ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  A  ; LC12       ; clk, reference_frequency:inst|TEMP[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ; reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  A  ; LC3        ; clk, reference_frequency:inst|TEMP[1], reference_frequency:inst|TEMP[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                       ; QM, SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], usb_control:inst1|wrt_state[0], usb_control:inst1|rnd_state[0], AD_frequency:inst4|TEMP[1], AD_frequency:inst4|ad_clock~reg0, SH_ICG_frequency:inst5|CNT[1], usb_control:inst1|wrt_state[1], usb_control:inst1|rnd_state[1], usb_control:inst1|USB_WD, usb_control:inst1|USB_RD, SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP ;
+;  A  ; LC6        ; SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                      ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  A  ; LC7        ; SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[3], reference_frequency:inst|ref_clock                                      ; SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                               ;
+;  A  ; LC13       ; TXE, RXF, reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ; usb_control:inst1|wrt_state[1], usb_control:inst1|USB_WD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  A  ; LC9        ; RXF, reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ; usb_control:inst1|rnd_state[1], usb_control:inst1|USB_RD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  A  ; LC4        ; SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                                                     ; SH                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  A  ; LC11       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; oe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
+;  A  ; LC5        ; SH_ICG_frequency:inst5|ICG_TMP                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ; ICG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+;  A  ; LC14       ; usb_control:inst1|wrt_state[0], TXE, RXF, reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                  ; usb_control:inst1|USB_WD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  A  ; LC2        ; SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[10], reference_frequency:inst|ref_clock                                                                                                                                      ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  A  ; LC16       ; usb_control:inst1|wrt_state[1], usb_control:inst1|wrt_state[0], TXE, RXF, usb_control:inst1|USB_WD, reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                        ; usb_control:inst1|USB_WD, USB_WD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
+;  A  ; LC1        ; SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                      ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  A  ; LC8        ; SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                      ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC39       ; SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[2], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                               ; SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                 ;
+;  C  ; LC47       ; reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ; SH_ICG_frequency:inst5|CNT[2], AD_frequency:inst4|TEMP[1], AD_frequency:inst4|ad_clock~reg0, SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                   ;
+;  C  ; LC44       ; SH_ICG_frequency:inst5|CNT[0], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                             ; AD_frequency:inst4|ad_clock~reg0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
+;  C  ; LC40       ; SH_ICG_frequency:inst5|CNT[0], AD_frequency:inst4|TEMP[1], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                 ; ad_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  C  ; LC48       ; SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                              ; SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                  ;
+;  C  ; LC34       ; SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                 ; SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                               ;
+;  C  ; LC38       ; SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[5], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                  ; SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                               ;
+;  C  ; LC37       ; SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[6], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                   ; SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                                                              ;
+;  C  ; LC42       ; SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                      ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC43       ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                    ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|ICG_TMP, SH_ICG_frequency:inst5|SH_TMP, SH_ICG_frequency:inst5|CNT~82, SH_ICG_frequency:inst5|LessThan1~11                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC33       ; SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[1]                                                                                                         ; SH_ICG_frequency:inst5|CNT[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
+;  C  ; LC35       ; SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[4], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[9]                                                                          ; SH_ICG_frequency:inst5|ICG_TMP                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
+;  C  ; LC36       ; SH_ICG_frequency:inst5|LessThan1~11, SH_ICG_frequency:inst5|CNT[7], SH_ICG_frequency:inst5|CNT[5], SH_ICG_frequency:inst5|CNT[3], SH_ICG_frequency:inst5|CNT[11], SH_ICG_frequency:inst5|CNT[8], SH_ICG_frequency:inst5|CNT[13], SH_ICG_frequency:inst5|CNT[12], SH_ICG_frequency:inst5|CNT[10], SH_ICG_frequency:inst5|CNT[6], SH_ICG_frequency:inst5|CNT[9], SH_ICG_frequency:inst5|CNT[2], SH_ICG_frequency:inst5|CNT[1], SH_ICG_frequency:inst5|CNT[0], SH_ICG_frequency:inst5|CNT[4], reference_frequency:inst|ref_clock ; SH_ICG_frequency:inst5|ICG_TMP~2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
+;  C  ; LC46       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; USB_DATA[1]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  C  ; LC41       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; USB_DATA[0]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  C  ; LC45       ; clk                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ; reference_frequency:inst|TEMP[1], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;
+;  D  ; LC50       ; usb_control:inst1|rnd_state[0], RXF, reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                                                                                       ; usb_control:inst1|USB_RD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
+;  D  ; LC64       ; usb_control:inst1|rnd_state[1], RXF, usb_control:inst1|USB_RD, usb_control:inst1|rnd_state[0], reference_frequency:inst|ref_clock                                                                                                                                                                                                                                                                                                                                                                                             ; usb_control:inst1|USB_RD, USB_RD                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
+;  D  ; LC62       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; USB_DATA[7]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC57       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; USB_DATA[6]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC53       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; USB_DATA[5]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC52       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; USB_DATA[4]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC51       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; USB_DATA[3]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+;  D  ; LC49       ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ; USB_DATA[2]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
++-----+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Fitter Device Options                                         ;
++----------------------------------------------+----------------+
+; Option                                       ; Setting        ;
++----------------------------------------------+----------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off            ;
+; Enable device-wide reset (DEV_CLRn)          ; Off            ;
+; Enable device-wide output enable (DEV_OE)    ; Off            ;
+; Enable INIT_DONE output                      ; Off            ;
+; Configuration scheme                         ; Passive Serial ;
+; Security bit                                 ; Off            ;
+; Base pin-out file on sameframe device        ; Off            ;
++----------------------------------------------+----------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 25 20:21:42 2016
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off industrial_camera_CCD -c industrial_camera_CCD
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Selected device EPM7064STC44-10 for design "industrial_camera_CCD"
+Warning: Macrocell buffer inserted after node "SH_ICG_frequency:inst5|ICG_TMP"
+Info: Quartus II Fitter was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 160 megabytes
+    Info: Processing ended: Fri Nov 25 20:21:42 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

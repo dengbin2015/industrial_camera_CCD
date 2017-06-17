@@ -1,0 +1,434 @@
+Classic Timing Analyzer report for industrial_camera_CCD
+Fri Nov 25 20:21:45 2016
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                          ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                           ; To                             ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; -1.000 ns                        ; TXE                            ; usb_control:inst1|USB_WD       ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 21.000 ns                        ; SH_ICG_frequency:inst5|ICG_TMP ; ICG                            ; clk        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 6.000 ns                         ; TXE                            ; usb_control:inst1|USB_WD       ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 92.59 MHz ( period = 10.800 ns ) ; SH_ICG_frequency:inst5|CNT[4]  ; SH_ICG_frequency:inst5|ICG_TMP ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                ;                                ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------------------------+--------------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EPM7064STC44-10    ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                              ;
++-------+-----------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)              ; From                               ; To                                 ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+-----------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 92.59 MHz ( period = 10.800 ns )  ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|ICG_TMP     ; clk        ; clk      ; None                        ; None                      ; 6.800 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; reference_frequency:inst|TEMP[0]   ; reference_frequency:inst|TEMP[0]   ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; reference_frequency:inst|TEMP[0]   ; reference_frequency:inst|TEMP[1]   ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; reference_frequency:inst|TEMP[1]   ; reference_frequency:inst|TEMP[1]   ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; reference_frequency:inst|TEMP[0]   ; reference_frequency:inst|ref_clock ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; reference_frequency:inst|TEMP[1]   ; reference_frequency:inst|ref_clock ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; reference_frequency:inst|ref_clock ; reference_frequency:inst|ref_clock ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[2]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[2]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[2]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[0]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[1]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[1]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|wrt_state[0]     ; usb_control:inst1|wrt_state[0]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|rnd_state[0]     ; usb_control:inst1|rnd_state[0]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; AD_frequency:inst4|TEMP[1]         ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; AD_frequency:inst4|TEMP[1]         ; AD_frequency:inst4|TEMP[1]         ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; AD_frequency:inst4|ad_clock~reg0   ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; AD_frequency:inst4|TEMP[1]         ; AD_frequency:inst4|ad_clock~reg0   ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|wrt_state[0]     ; usb_control:inst1|wrt_state[1]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|wrt_state[1]     ; usb_control:inst1|wrt_state[1]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|rnd_state[0]     ; usb_control:inst1|rnd_state[1]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|rnd_state[1]     ; usb_control:inst1|rnd_state[1]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|wrt_state[0]     ; usb_control:inst1|USB_WD           ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|wrt_state[1]     ; usb_control:inst1|USB_WD           ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|USB_WD           ; usb_control:inst1|USB_WD           ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|rnd_state[0]     ; usb_control:inst1|USB_RD           ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|rnd_state[1]     ; usb_control:inst1|USB_RD           ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; usb_control:inst1|USB_RD           ; usb_control:inst1|USB_RD           ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[3]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[13]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[12]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[10]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[9]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[11]     ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[8]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[7]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[6]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[6]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[6]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[6]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[6]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[6]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[6]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[5]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[5]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[5]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[5]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[5]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[5]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[0]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|CNT[4]      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[2]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[1]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[3]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[13]     ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[12]     ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[10]     ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[9]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[11]     ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[8]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[7]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[6]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[5]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
+; N/A   ; 100.00 MHz ( period = 10.000 ns ) ; SH_ICG_frequency:inst5|CNT[4]      ; SH_ICG_frequency:inst5|SH_TMP      ; clk        ; clk      ; None                        ; None                      ; 6.000 ns                ;
++-------+-----------------------------------+------------------------------------+------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; tsu                                                                                  ;
++-------+--------------+------------+------+--------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                             ; To Clock ;
++-------+--------------+------------+------+--------------------------------+----------+
+; N/A   ; None         ; -1.000 ns  ; RXF  ; usb_control:inst1|wrt_state[0] ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; RXF  ; usb_control:inst1|rnd_state[0] ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; RXF  ; usb_control:inst1|wrt_state[1] ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; RXF  ; usb_control:inst1|rnd_state[1] ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; RXF  ; usb_control:inst1|USB_WD       ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; RXF  ; usb_control:inst1|USB_RD       ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; TXE  ; usb_control:inst1|wrt_state[0] ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; TXE  ; usb_control:inst1|wrt_state[1] ; clk      ;
+; N/A   ; None         ; -1.000 ns  ; TXE  ; usb_control:inst1|USB_WD       ; clk      ;
++-------+--------------+------------+------+--------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------+
+; tco                                                                                            ;
++-------+--------------+------------+------------------------------------+----------+------------+
+; Slack ; Required tco ; Actual tco ; From                               ; To       ; From Clock ;
++-------+--------------+------------+------------------------------------+----------+------------+
+; N/A   ; None         ; 21.000 ns  ; SH_ICG_frequency:inst5|ICG_TMP     ; ICG      ; clk        ;
+; N/A   ; None         ; 13.000 ns  ; SH_ICG_frequency:inst5|SH_TMP      ; SH       ; clk        ;
+; N/A   ; None         ; 13.000 ns  ; usb_control:inst1|USB_RD           ; USB_RD   ; clk        ;
+; N/A   ; None         ; 13.000 ns  ; usb_control:inst1|USB_WD           ; USB_WD   ; clk        ;
+; N/A   ; None         ; 13.000 ns  ; AD_frequency:inst4|ad_clock~reg0   ; ad_clock ; clk        ;
+; N/A   ; None         ; 5.000 ns   ; reference_frequency:inst|ref_clock ; QM       ; clk        ;
++-------+--------------+------------+------------------------------------+----------+------------+
+
+
++--------------------------------------------------------------------------------------------+
+; th                                                                                         ;
++---------------+-------------+-----------+------+--------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                             ; To Clock ;
++---------------+-------------+-----------+------+--------------------------------+----------+
+; N/A           ; None        ; 6.000 ns  ; RXF  ; usb_control:inst1|wrt_state[0] ; clk      ;
+; N/A           ; None        ; 6.000 ns  ; RXF  ; usb_control:inst1|rnd_state[0] ; clk      ;
+; N/A           ; None        ; 6.000 ns  ; RXF  ; usb_control:inst1|wrt_state[1] ; clk      ;
+; N/A           ; None        ; 6.000 ns  ; RXF  ; usb_control:inst1|rnd_state[1] ; clk      ;
+; N/A           ; None        ; 6.000 ns  ; RXF  ; usb_control:inst1|USB_WD       ; clk      ;
+; N/A           ; None        ; 6.000 ns  ; RXF  ; usb_control:inst1|USB_RD       ; clk      ;
+; N/A           ; None        ; 6.000 ns  ; TXE  ; usb_control:inst1|wrt_state[0] ; clk      ;
+; N/A           ; None        ; 6.000 ns  ; TXE  ; usb_control:inst1|wrt_state[1] ; clk      ;
+; N/A           ; None        ; 6.000 ns  ; TXE  ; usb_control:inst1|USB_WD       ; clk      ;
++---------------+-------------+-----------+------+--------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 25 20:21:44 2016
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off industrial_camera_CCD -c industrial_camera_CCD
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Timing Analysis does not support the analysis of latches as synchronous elements for the currently selected device family
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "reference_frequency:inst|ref_clock" as buffer
+Info: Clock "clk" has Internal fmax of 92.59 MHz between source register "SH_ICG_frequency:inst5|CNT[2]" and destination register "SH_ICG_frequency:inst5|CNT[3]" (period= 10.8 ns)
+    Info: + Longest register to register delay is 6.800 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC39; Fanout = 25; REG Node = 'SH_ICG_frequency:inst5|CNT[2]'
+        Info: 2: + IC(1.000 ns) + CELL(5.000 ns) = 6.000 ns; Loc. = LC33; Fanout = 1; COMB Node = 'SH_ICG_frequency:inst5|CNT~82'
+        Info: 3: + IC(0.000 ns) + CELL(0.800 ns) = 6.800 ns; Loc. = LC34; Fanout = 24; REG Node = 'SH_ICG_frequency:inst5|CNT[3]'
+        Info: Total cell delay = 5.800 ns ( 85.29 % )
+        Info: Total interconnect delay = 1.000 ns ( 14.71 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 9.500 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_37; Fanout = 3; CLK Node = 'clk'
+            Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 3.500 ns; Loc. = LC3; Fanout = 26; REG Node = 'reference_frequency:inst|ref_clock'
+            Info: 3: + IC(1.000 ns) + CELL(5.000 ns) = 9.500 ns; Loc. = LC34; Fanout = 24; REG Node = 'SH_ICG_frequency:inst5|CNT[3]'
+            Info: Total cell delay = 8.500 ns ( 89.47 % )
+            Info: Total interconnect delay = 1.000 ns ( 10.53 % )
+        Info: - Longest clock path from clock "clk" to source register is 9.500 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_37; Fanout = 3; CLK Node = 'clk'
+            Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 3.500 ns; Loc. = LC3; Fanout = 26; REG Node = 'reference_frequency:inst|ref_clock'
+            Info: 3: + IC(1.000 ns) + CELL(5.000 ns) = 9.500 ns; Loc. = LC39; Fanout = 25; REG Node = 'SH_ICG_frequency:inst5|CNT[2]'
+            Info: Total cell delay = 8.500 ns ( 89.47 % )
+            Info: Total interconnect delay = 1.000 ns ( 10.53 % )
+    Info: + Micro clock to output delay of source is 2.000 ns
+    Info: + Micro setup delay of destination is 2.000 ns
+Info: tsu for register "usb_control:inst1|wrt_state[0]" (data pin = "RXF", clock pin = "clk") is -1.000 ns
+    Info: + Longest pin to register delay is 6.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_38; Fanout = 8; PIN Node = 'RXF'
+        Info: 2: + IC(0.000 ns) + CELL(5.000 ns) = 6.500 ns; Loc. = LC13; Fanout = 3; REG Node = 'usb_control:inst1|wrt_state[0]'
+        Info: Total cell delay = 6.500 ns ( 100.00 % )
+    Info: + Micro setup delay of destination is 2.000 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 9.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_37; Fanout = 3; CLK Node = 'clk'
+        Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 3.500 ns; Loc. = LC3; Fanout = 26; REG Node = 'reference_frequency:inst|ref_clock'
+        Info: 3: + IC(1.000 ns) + CELL(5.000 ns) = 9.500 ns; Loc. = LC13; Fanout = 3; REG Node = 'usb_control:inst1|wrt_state[0]'
+        Info: Total cell delay = 8.500 ns ( 89.47 % )
+        Info: Total interconnect delay = 1.000 ns ( 10.53 % )
+Info: tco from clock "clk" to destination pin "ICG" through register "SH_ICG_frequency:inst5|ICG_TMP" is 21.000 ns
+    Info: + Longest clock path from clock "clk" to source register is 9.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_37; Fanout = 3; CLK Node = 'clk'
+        Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 3.500 ns; Loc. = LC3; Fanout = 26; REG Node = 'reference_frequency:inst|ref_clock'
+        Info: 3: + IC(1.000 ns) + CELL(5.000 ns) = 9.500 ns; Loc. = LC36; Fanout = 1; REG Node = 'SH_ICG_frequency:inst5|ICG_TMP'
+        Info: Total cell delay = 8.500 ns ( 89.47 % )
+        Info: Total interconnect delay = 1.000 ns ( 10.53 % )
+    Info: + Micro clock to output delay of source is 2.000 ns
+    Info: + Longest register to pin delay is 9.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC36; Fanout = 1; REG Node = 'SH_ICG_frequency:inst5|ICG_TMP'
+        Info: 2: + IC(1.000 ns) + CELL(7.000 ns) = 8.000 ns; Loc. = LC5; Fanout = 1; COMB Node = 'SH_ICG_frequency:inst5|ICG_TMP~2'
+        Info: 3: + IC(0.000 ns) + CELL(1.500 ns) = 9.500 ns; Loc. = PIN_2; Fanout = 0; PIN Node = 'ICG'
+        Info: Total cell delay = 8.500 ns ( 89.47 % )
+        Info: Total interconnect delay = 1.000 ns ( 10.53 % )
+Info: th for register "usb_control:inst1|wrt_state[0]" (data pin = "RXF", clock pin = "clk") is 6.000 ns
+    Info: + Longest clock path from clock "clk" to destination register is 9.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_37; Fanout = 3; CLK Node = 'clk'
+        Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 3.500 ns; Loc. = LC3; Fanout = 26; REG Node = 'reference_frequency:inst|ref_clock'
+        Info: 3: + IC(1.000 ns) + CELL(5.000 ns) = 9.500 ns; Loc. = LC13; Fanout = 3; REG Node = 'usb_control:inst1|wrt_state[0]'
+        Info: Total cell delay = 8.500 ns ( 89.47 % )
+        Info: Total interconnect delay = 1.000 ns ( 10.53 % )
+    Info: + Micro hold delay of destination is 3.000 ns
+    Info: - Shortest pin to register delay is 6.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_38; Fanout = 8; PIN Node = 'RXF'
+        Info: 2: + IC(0.000 ns) + CELL(5.000 ns) = 6.500 ns; Loc. = LC13; Fanout = 3; REG Node = 'usb_control:inst1|wrt_state[0]'
+        Info: Total cell delay = 6.500 ns ( 100.00 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 127 megabytes
+    Info: Processing ended: Fri Nov 25 20:21:45 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

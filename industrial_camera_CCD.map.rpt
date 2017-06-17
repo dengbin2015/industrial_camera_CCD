@@ -1,0 +1,321 @@
+Analysis & Synthesis report for industrial_camera_CCD
+Fri Nov 25 20:26:35 2016
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Source assignments for AD_frequency:inst4|lpm_counter:count_rtl_0
+  6. Source assignments for SH_ICG_frequency:inst5|lpm_add_sub:Add0|addcore:adder[1]
+  7. Source assignments for SH_ICG_frequency:inst5|lpm_add_sub:Add0|addcore:adder[0]
+  8. Parameter Settings for Inferred Entity Instance: AD_frequency:inst4|lpm_counter:count_rtl_0
+  9. Parameter Settings for Inferred Entity Instance: SH_ICG_frequency:inst5|lpm_add_sub:Add0
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Fri Nov 25 20:26:35 2016            ;
+; Quartus II Version          ; 9.0 Build 184 04/29/2009 SP 1 SJ Web Edition ;
+; Revision Name               ; industrial_camera_CCD                        ;
+; Top-level Entity Name       ; industrial_camera_CCD                        ;
+; Family                      ; MAX7000S                                     ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++--------------------------------------------------------------+-----------------------+-----------------------+
+; Option                                                       ; Setting               ; Default Value         ;
++--------------------------------------------------------------+-----------------------+-----------------------+
+; Device                                                       ; EPM7064STC44-10       ;                       ;
+; Top-level entity name                                        ; industrial_camera_CCD ; industrial_camera_CCD ;
+; Family name                                                  ; MAX7000S              ; Stratix II            ;
+; Optimization Technique                                       ; Balanced              ; Speed                 ;
+; Use Generated Physical Constraints File                      ; Off                   ;                       ;
+; Use smart compilation                                        ; Off                   ; Off                   ;
+; Create Debugging Nodes for IP Cores                          ; Off                   ; Off                   ;
+; Preserve fewer node names                                    ; On                    ; On                    ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                   ; Off                   ;
+; Verilog Version                                              ; Verilog_2001          ; Verilog_2001          ;
+; VHDL Version                                                 ; VHDL93                ; VHDL93                ;
+; State Machine Processing                                     ; Auto                  ; Auto                  ;
+; Safe State Machine                                           ; Off                   ; Off                   ;
+; Extract Verilog State Machines                               ; On                    ; On                    ;
+; Extract VHDL State Machines                                  ; On                    ; On                    ;
+; Ignore Verilog initial constructs                            ; Off                   ; Off                   ;
+; Iteration limit for constant Verilog loops                   ; 5000                  ; 5000                  ;
+; Iteration limit for non-constant Verilog loops               ; 250                   ; 250                   ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                    ; On                    ;
+; Parallel Synthesis                                           ; Off                   ; Off                   ;
+; NOT Gate Push-Back                                           ; On                    ; On                    ;
+; Power-Up Don't Care                                          ; On                    ; On                    ;
+; Remove Duplicate Registers                                   ; On                    ; On                    ;
+; Ignore CARRY Buffers                                         ; Off                   ; Off                   ;
+; Ignore CASCADE Buffers                                       ; Off                   ; Off                   ;
+; Ignore GLOBAL Buffers                                        ; Off                   ; Off                   ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                   ; Off                   ;
+; Ignore LCELL Buffers                                         ; Auto                  ; Auto                  ;
+; Ignore SOFT Buffers                                          ; Off                   ; Off                   ;
+; Limit AHDL Integers to 32 Bits                               ; Off                   ; Off                   ;
+; Allow XOR Gate Usage                                         ; On                    ; On                    ;
+; Auto Logic Cell Insertion                                    ; On                    ; On                    ;
+; Parallel Expander Chain Length                               ; 4                     ; 4                     ;
+; Auto Parallel Expanders                                      ; On                    ; On                    ;
+; Auto Open-Drain Pins                                         ; On                    ; On                    ;
+; Auto Resource Sharing                                        ; Off                   ; Off                   ;
+; Maximum Fan-in Per Macrocell                                 ; 100                   ; 100                   ;
+; Use LogicLock Constraints during Resource Balancing          ; On                    ; On                    ;
+; Ignore translate_off and synthesis_off directives            ; Off                   ; Off                   ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                    ; On                    ;
+; HDL message level                                            ; Level2                ; Level2                ;
+; Suppress Register Optimization Related Messages              ; Off                   ; Off                   ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                   ; 100                   ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                   ; 100                   ;
+; Block Design Naming                                          ; Auto                  ; Auto                  ;
+; Synthesis Effort                                             ; Auto                  ; Auto                  ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                    ; On                    ;
+; Analysis & Synthesis Message Level                           ; Medium                ; Medium                ;
++--------------------------------------------------------------+-----------------------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reference_frequency.vhd          ; yes             ; User VHDL File                     ; C:/Documents and Settings/Administrator/×ÀÃæ/7¸öFF²âÊÔ.11.25/7¸öFF²âÊÔ/test_industrial camera CCD_no CCD - OE - fenzhen - wuyanchi/reference_frequency.vhd   ;
+; AD_frequency.vhd                 ; yes             ; User VHDL File                     ; C:/Documents and Settings/Administrator/×ÀÃæ/7¸öFF²âÊÔ.11.25/7¸öFF²âÊÔ/test_industrial camera CCD_no CCD - OE - fenzhen - wuyanchi/AD_frequency.vhd          ;
+; usb_control.vhd                  ; yes             ; User VHDL File                     ; C:/Documents and Settings/Administrator/×ÀÃæ/7¸öFF²âÊÔ.11.25/7¸öFF²âÊÔ/test_industrial camera CCD_no CCD - OE - fenzhen - wuyanchi/usb_control.vhd           ;
+; SH_ICG_frequency.vhd             ; yes             ; User VHDL File                     ; C:/Documents and Settings/Administrator/×ÀÃæ/7¸öFF²âÊÔ.11.25/7¸öFF²âÊÔ/test_industrial camera CCD_no CCD - OE - fenzhen - wuyanchi/SH_ICG_frequency.vhd      ;
+; industrial_camera_CCD.bdf        ; yes             ; User Block Diagram/Schematic File  ; C:/Documents and Settings/Administrator/×ÀÃæ/7¸öFF²âÊÔ.11.25/7¸öFF²âÊÔ/test_industrial camera CCD_no CCD - OE - fenzhen - wuyanchi/industrial_camera_CCD.bdf ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                                ;
+; lpm_constant.inc                 ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/lpm_constant.inc                                                                               ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                 ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                                ;
+; cmpconst.inc                     ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/cmpconst.inc                                                                                   ;
+; lpm_compare.inc                  ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/lpm_compare.inc                                                                                ;
+; lpm_counter.inc                  ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/lpm_counter.inc                                                                                ;
+; dffeea.inc                       ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/dffeea.inc                                                                                     ;
+; alt_synch_counter.inc            ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/alt_synch_counter.inc                                                                          ;
+; alt_synch_counter_f.inc          ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/alt_synch_counter_f.inc                                                                        ;
+; alt_counter_f10ke.inc            ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/alt_counter_f10ke.inc                                                                          ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                        ;
+; aglobal90.inc                    ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/aglobal90.inc                                                                                  ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                                                ;
+; addcore.inc                      ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/addcore.inc                                                                                    ;
+; look_add.inc                     ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/look_add.inc                                                                                   ;
+; bypassff.inc                     ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/bypassff.inc                                                                                   ;
+; altshift.inc                     ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/altshift.inc                                                                                   ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                                                        ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/alt_mercury_add_sub.inc                                                                        ;
+; addcore.tdf                      ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/addcore.tdf                                                                                    ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/a_csnbuffer.inc                                                                                ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/a_csnbuffer.tdf                                                                                ;
+; look_add.tdf                     ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/look_add.tdf                                                                                   ;
+; altshift.tdf                     ; yes             ; Megafunction                       ; d:/program files/altera/90sp1/quartus/libraries/megafunctions/altshift.tdf                                                                                   ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Source assignments for AD_frequency:inst4|lpm_counter:count_rtl_0 ;
++---------------------------+-------+------+------------------------+
+; Assignment                ; Value ; From ; To                     ;
++---------------------------+-------+------+------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                      ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                      ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                      ;
++---------------------------+-------+------+------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Source assignments for SH_ICG_frequency:inst5|lpm_add_sub:Add0|addcore:adder[1] ;
++---------------------------+-------+------+--------------------------------------+
+; Assignment                ; Value ; From ; To                                   ;
++---------------------------+-------+------+--------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                    ;
++---------------------------+-------+------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Source assignments for SH_ICG_frequency:inst5|lpm_add_sub:Add0|addcore:adder[0] ;
++---------------------------+-------+------+--------------------------------------+
+; Assignment                ; Value ; From ; To                                   ;
++---------------------------+-------+------+--------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                                    ;
++---------------------------+-------+------+--------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: AD_frequency:inst4|lpm_counter:count_rtl_0 ;
++------------------------+-------------------+------------------------------------------------+
+; Parameter Name         ; Value             ; Type                                           ;
++------------------------+-------------------+------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                 ;
+; LPM_WIDTH              ; 12                ; Untyped                                        ;
+; LPM_DIRECTION          ; UP                ; Untyped                                        ;
+; LPM_MODULUS            ; 0                 ; Untyped                                        ;
+; LPM_AVALUE             ; UNUSED            ; Untyped                                        ;
+; LPM_SVALUE             ; UNUSED            ; Untyped                                        ;
+; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                        ;
+; DEVICE_FAMILY          ; MAX7000S          ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL            ; Untyped                                        ;
+; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                             ;
+; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                             ;
+; CARRY_CNT_EN           ; SMART             ; Untyped                                        ;
+; LABWIDE_SCLR           ; ON                ; Untyped                                        ;
+; USE_NEW_VERSION        ; TRUE              ; Untyped                                        ;
+; CBXI_PARAMETER         ; NOTHING           ; Untyped                                        ;
++------------------------+-------------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: SH_ICG_frequency:inst5|lpm_add_sub:Add0 ;
++------------------------+-------------+---------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                              ;
++------------------------+-------------+---------------------------------------------------+
+; LPM_WIDTH              ; 14          ; Untyped                                           ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                           ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                           ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                           ;
+; LPM_PIPELINE           ; 0           ; Untyped                                           ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                           ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                           ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                           ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                           ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                ;
+; DEVICE_FAMILY          ; MAX7000S    ; Untyped                                           ;
+; USE_WYS                ; OFF         ; Untyped                                           ;
+; STYLE                  ; FAST        ; Untyped                                           ;
+; CBXI_PARAMETER         ; add_sub_8ph ; Untyped                                           ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                      ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                    ;
++------------------------+-------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 25 20:26:34 2016
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off industrial_camera_CCD -c industrial_camera_CCD
+Info: Found 2 design units, including 1 entities, in source file reference_frequency.vhd
+    Info: Found design unit 1: reference_frequency-reference_frequency_ARCH
+    Info: Found entity 1: reference_frequency
+Info: Found 2 design units, including 1 entities, in source file AD_frequency.vhd
+    Info: Found design unit 1: AD_frequency-AD_frequency_ARCH
+    Info: Found entity 1: AD_frequency
+Info: Found 2 design units, including 1 entities, in source file usb_control.vhd
+    Info: Found design unit 1: usb_control-usb_control_ARCH
+    Info: Found entity 1: usb_control
+Info: Found 2 design units, including 1 entities, in source file SH_ICG_frequency.vhd
+    Info: Found design unit 1: SH_ICG_frequency-SH_ICG_frequency_ARCH
+    Info: Found entity 1: SH_ICG_frequency
+Info: Found 1 design units, including 1 entities, in source file industrial_camera_CCD.bdf
+    Info: Found entity 1: industrial_camera_CCD
+Info: Elaborating entity "industrial_camera_CCD" for the top level hierarchy
+Info: Elaborating entity "AD_frequency" for hierarchy "AD_frequency:inst4"
+Info: Elaborating entity "reference_frequency" for hierarchy "reference_frequency:inst"
+Info: Elaborating entity "SH_ICG_frequency" for hierarchy "SH_ICG_frequency:inst5"
+Warning (10492): VHDL Process Statement warning at SH_ICG_frequency.vhd(52): signal "SH_TMP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at SH_ICG_frequency.vhd(52): signal "ICG_TMP" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Elaborating entity "usb_control" for hierarchy "usb_control:inst1"
+Warning (10492): VHDL Process Statement warning at usb_control.vhd(21): signal "usb_contorl_clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at usb_control.vhd(38): signal "usb_contorl_clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred lpm_counter megafunction (LPM_WIDTH=12) from the following logic: "AD_frequency:inst4|count[0]~24"
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "SH_ICG_frequency:inst5|Add0"
+Info: Elaborated megafunction instantiation "AD_frequency:inst4|lpm_counter:count_rtl_0"
+Info: Instantiated megafunction "AD_frequency:inst4|lpm_counter:count_rtl_0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "12"
+    Info: Parameter "LPM_DIRECTION" = "UP"
+    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
+Info: Elaborated megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0"
+Info: Instantiated megafunction "SH_ICG_frequency:inst5|lpm_add_sub:Add0" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "14"
+    Info: Parameter "LPM_DIRECTION" = "ADD"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
+Info: Elaborated megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0|addcore:adder[1]", which is child of megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0|addcore:adder[1]|a_csnbuffer:oflow_node", which is child of megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0|addcore:adder[1]|a_csnbuffer:result_node", which is child of megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0|addcore:adder[0]", which is child of megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0|look_add:look_ahead_unit", which is child of megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0"
+Info: Elaborated megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "SH_ICG_frequency:inst5|lpm_add_sub:Add0"
+Info: Ignored 14 buffer(s)
+    Info: Ignored 14 SOFT buffer(s)
+Warning: The following nodes have both tri-state and non-tri-state drivers
+    Warning: Inserted always-enabled tri-state buffer between "USB_DATA[7]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "USB_DATA[6]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "USB_DATA[5]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "USB_DATA[4]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "USB_DATA[3]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "USB_DATA[2]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "USB_DATA[1]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "USB_DATA[0]" and its non-tri-state driver.
+Info: One or more bidirs are fed by always enabled tri-state buffers
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "USB_DATA[7]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "USB_DATA[6]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "USB_DATA[5]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "USB_DATA[4]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "USB_DATA[3]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "USB_DATA[2]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "USB_DATA[1]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "USB_DATA[0]" is moved to its source
+Warning: TRI or OPNDRN buffers permanently enabled
+    Warning: Node "USB_DATA~synth"
+    Warning: Node "USB_DATA~synth"
+    Warning: Node "USB_DATA~synth"
+    Warning: Node "USB_DATA~synth"
+    Warning: Node "USB_DATA~synth"
+    Warning: Node "USB_DATA~synth"
+    Warning: Node "USB_DATA~synth"
+    Warning: Node "USB_DATA~synth"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "oe" is stuck at GND
+Error: Can't fit 75 registers in device
+Error: Quartus II Analysis & Synthesis was unsuccessful. 1 error, 24 warnings
+    Error: Peak virtual memory: 189 megabytes
+    Error: Processing ended: Fri Nov 25 20:26:35 2016
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:02
+
+

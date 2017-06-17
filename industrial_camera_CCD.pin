@@ -1,0 +1,111 @@
+ -- Copyright (C) 1991-2009 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCC           : Dedicated power pin, which MUST be connected to VCC.
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks (Bank 13, 14, 15, 16 and 17),
+ --           	    connect each pin marked GND* either individually through a 10k Ohm resistor
+ --           	    to GND or tie all pins together and connect through a single 10k Ohm resistor
+ --           	    to GND.
+ --           	    For non-transceiver I/O banks, connect each pin marked GND* directly to GND
+ --           	    or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- NON_MIGRATABLE: This pin cannot be migrated.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus II Version 9.0 Build 184 04/29/2009 Service Pack 1 SJ Web Edition
+CHIP  "industrial_camera_CCD"  ASSIGNED TO AN: EPM7064STC44-10
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+TDI                          : 1         : input  : TTL               :         :           : N              
+ICG                          : 2         : output : TTL               :         :           : Y              
+SH                           : 3         : output : TTL               :         :           : Y              
+GND                          : 4         : gnd    :                   :         :           :                
+QM                           : 5         : output : TTL               :         :           : Y              
+RESERVED                     : 6         :        :                   :         :           :                
+TMS                          : 7         : input  : TTL               :         :           : N              
+RESERVED                     : 8         :        :                   :         :           :                
+VCC                          : 9         : power  :                   :         :           :                
+RESERVED                     : 10        :        :                   :         :           :                
+RESERVED                     : 11        :        :                   :         :           :                
+din[7]                       : 12        : input  : TTL               :         :           : Y              
+din[6]                       : 13        : input  : TTL               :         :           : Y              
+din[5]                       : 14        : input  : TTL               :         :           : Y              
+din[4]                       : 15        : input  : TTL               :         :           : Y              
+GND                          : 16        : gnd    :                   :         :           :                
+VCC                          : 17        : power  :                   :         :           :                
+din[3]                       : 18        : input  : TTL               :         :           : Y              
+din[2]                       : 19        : input  : TTL               :         :           : Y              
+din[1]                       : 20        : input  : TTL               :         :           : Y              
+din[0]                       : 21        : input  : TTL               :         :           : Y              
+ad_clock                     : 22        : output : TTL               :         :           : Y              
+USB_DATA[0]                  : 23        : bidir  : TTL               :         :           : Y              
+GND                          : 24        : gnd    :                   :         :           :                
+USB_DATA[1]                  : 25        : bidir  : TTL               :         :           : Y              
+TCK                          : 26        : input  : TTL               :         :           : N              
+USB_DATA[2]                  : 27        : bidir  : TTL               :         :           : Y              
+USB_DATA[3]                  : 28        : bidir  : TTL               :         :           : Y              
+VCC                          : 29        : power  :                   :         :           :                
+USB_DATA[4]                  : 30        : bidir  : TTL               :         :           : Y              
+USB_DATA[5]                  : 31        : bidir  : TTL               :         :           : Y              
+TDO                          : 32        : output : TTL               :         :           : N              
+USB_DATA[6]                  : 33        : bidir  : TTL               :         :           : Y              
+USB_DATA[7]                  : 34        : bidir  : TTL               :         :           : Y              
+USB_RD                       : 35        : output : TTL               :         :           : Y              
+GND                          : 36        : gnd    :                   :         :           :                
+clk                          : 37        : input  : TTL               :         :           : Y              
+RXF                          : 38        : input  : TTL               :         :           : Y              
+GND+                         : 39        :        :                   :         :           :                
+GND+                         : 40        :        :                   :         :           :                
+VCC                          : 41        : power  :                   :         :           :                
+USB_WD                       : 42        : output : TTL               :         :           : Y              
+TXE                          : 43        : input  : TTL               :         :           : Y              
+oe                           : 44        : output : TTL               :         :           : Y              
